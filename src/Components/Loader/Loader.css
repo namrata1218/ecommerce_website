@@ -1,0 +1,41 @@
+.loader{
+    width: 50px;
+    height: 100px;
+    background: rgb(247, 145, 247);
+    border-radius: 50%;
+    border-color:white ;
+    border-style:solid ;
+    border-width: 2px 50px 2px 2px;
+    position: relative;
+    animation: spin 0.5s linear infinite;
+}
+ .loader::before{
+    content: '';
+    width: 14px;
+    height: 16px;
+    border:18px solid rgb(247, 145, 247);
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 65%;
+ }
+
+ .loader::after{
+    content: '';
+    width: 12px;
+    height: 14px;
+    border:18px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 49%;
+    left: 38%;
+ }
+
+ @keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+ }
